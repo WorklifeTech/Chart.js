@@ -330,7 +330,7 @@ function getTooltipSize(tooltip, model) {
 	helpers.each(model.beforeBody.concat(model.afterBody), maxLineWidth);
 
 	// Body lines may include some extra width due to the color box
-	widthPadding = model.displayColors ? (bodyFontSize + 2) : 0;
+	widthPadding = model.displayColors ? (bodyFontSize + 5) : 0;
 	helpers.each(body, function(bodyItem) {
 		helpers.each(bodyItem.before, maxLineWidth);
 		helpers.each(bodyItem.lines, maxLineWidth);
@@ -811,7 +811,7 @@ var exports = Element.extend({
 		helpers.each(vm.beforeBody, fillLineOfText);
 
 		xLinePadding = drawColorBoxes && bodyAlignForCalculation !== 'right'
-			? bodyAlign === 'center' ? (bodyFontSize / 2 + 1) : (bodyFontSize + 2)
+			? bodyAlign === 'center' ? (bodyFontSize / 2 + 1) : (bodyFontSize + 5)
 			: 0;
 
 		// Draw body lines now
